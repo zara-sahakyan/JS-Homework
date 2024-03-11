@@ -69,10 +69,10 @@ console.log(replacePi1("picturespicturespictures", "pi"));
 
 //Solution2
 function replacePi2(str) {
-	if (!(str.includes("Pi") str.includes("pi")) {
+	if (!str.toLowerCase().includes("pi")) {
 		return str;
 	}
-	return replacePi2(str.replace("Pi", "3.14"));
+	return replacePi2(str.toLowerCase().replace("pi", "3.14"));
 }
 console.log(replacePi2("Picsart pipelines", "pi"));
 
