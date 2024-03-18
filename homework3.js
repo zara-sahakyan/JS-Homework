@@ -54,7 +54,7 @@ tree2 = {
 		},
 	],
 };
-making Tree1
+//making Tree1
 function makeTree1(nodes, rootId) {
 	const tree1 = {};
 	tree1[rootId] = {};
