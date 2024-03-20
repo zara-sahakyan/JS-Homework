@@ -74,3 +74,24 @@ function findTree1(nodes) {
 console.log(findTree1(nodes));
 //end of making Tree1
 
+//making Tree2
+function makeTree2(nodes, rootId) {
+	const tree2 = {};
+	tree2.id = rootId;
+	tree2.children = [];
+
+	for (let i = 0; i < nodes.length; i++) {
+		if (nodes[i].parentId === rootId) {
+			let newRootId = nodes[i].id;
+			tree2.children.push(makeTree2(nodes, newRootId));
+		}
+	}
+
+	return tree2;
+}
+function findTree2(nodes) {
+	root = nodes.find((obj) => !obj.parentId);
+	return makeTree2(nodes, root.id);
+}
+console.log(findTree2(nodes));
+//end of making Tree2
